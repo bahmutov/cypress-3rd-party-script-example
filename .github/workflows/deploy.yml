@@ -2,7 +2,12 @@ name: deploy
 on: [push]
 
 jobs:
+  # make sure the local tests pass
+  test:
+    uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1
+
   deploy:
+    needs: [test]
     runs-on: ubuntu-20.04
     # only deploy from the main branch
     if: github.ref == 'refs/heads/main'
