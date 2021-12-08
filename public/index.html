@@ -7,10 +7,17 @@
     <h1>Home</h1>
     <p>Check out the chat widget 👇</p>
     <p><button id="open-chat">Open chat 🗣</button></p>
-    <script
-      src="https://code.tidio.co/zwjhqkduaeqdmkflwoyfcmqd64fj2a3s.js"
-      async
-    ></script>
     <script src="app.js"></script>
+    <script>
+      // load 3rd party libraries
+      window.addEventListener('load', function () {
+        // add the script tag to the HEAD
+        const head = document.getElementsByTagName('head')[0]
+        const script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = 'https://code.tidio.co/zwjhqkduaeqdmkflwoyfcmqd64fj2a3s.js'
+        head.appendChild(script)
+      })
+    </script>
   </body>
 </html>
