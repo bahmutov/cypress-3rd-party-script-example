@@ -2,5 +2,6 @@
   "fixturesFolder": false,
   "supportFile": false,
   "pluginsFile": false,
-  "viewportWidth": 500
+  "viewportWidth": 500,
+  "chromeWebSecurity": false
 }
