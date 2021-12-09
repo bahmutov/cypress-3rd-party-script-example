@@ -9,7 +9,10 @@ describe('wait for 3rd party JS to start working', () => {
     // wait for the chat object to be created
     // before clicking on the button
     // https://on.cypress.io/its
-    cy.window().its('tidioChatApi')
+    // we increase the timeout, because the network request
+    // is slowed down by 3 seconds, leaving very little time
+    // for the the library to load and start working
+    cy.window().its('tidioChatApi', { timeout: 6000 })
     cy.get('#open-chat').click()
   })
 })

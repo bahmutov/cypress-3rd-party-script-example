@@ -4,6 +4,8 @@ on: [push]
 jobs:
   # make sure the local tests pass
   test:
+    # read https://glebbahmutov.com/blog/gh-reusable-workflows/
+    # https://github.com/bahmutov/cypress-workflows
     uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1
     with:
       record: true

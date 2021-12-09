@@ -11,11 +11,17 @@ The page from `public` is deployed to [https://glebbahmutov.com/cypress-3rd-part
 - [wait-for-chat-object.js](./cypress/integration/wait-for-chat-object.js) waits for the `window.tidioChatApi` property to exist before proceeding. The property is added by the chat code, thus we know it is ready.
 - [invoke-open.js](./cypress/integration/invoke-open.js) shows how the test code can call directly the chat object methods, even if the object was created by the application.
 - [spy-on-open.js](./cypress/integration/spy-on-open.js) spies on the application calling `tidioChatApi.open()` to confirm it was called once without any arguments.
+- [events.js](./cypress/integration/events.js) subscribes to the chat widget events and confirms the widget delivers the "ready" event.
+
+## Blog posts
+
+- [Dealing With 3rd Party Scripts In Cypress Tests](https://glebbahmutov.com/blog/3rd-party/)
 
 ## Videos
 
 - [Slow Down And Wait For 3rd Party JavaScript To Load](https://youtu.be/MzCACth7qLE)
 - [Spy On The Application Calling 3rd Party Library Code](https://youtu.be/5SBjkrKwhIA)
+- [Cypress Dashboard, Reusing GitHub Workflows, Flake Detection, And Test Retries](https://youtu.be/PRpuE2DXRlQ)
 
 ## Small print
 
