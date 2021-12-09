@@ -4,5 +4,9 @@
   "pluginsFile": false,
   "viewportWidth": 500,
   "chromeWebSecurity": false,
-  "projectId": "xh49s5"
+  "projectId": "xh49s5",
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  }
 }
