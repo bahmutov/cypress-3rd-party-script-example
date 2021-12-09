@@ -5,6 +5,10 @@ jobs:
   # make sure the local tests pass
   test:
     uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1
+    with:
+      record: true
+    secrets:
+      recordKey: ${{ secrets.CYPRESS_RECORD_KEY }}
 
   deploy:
     needs: [test]
