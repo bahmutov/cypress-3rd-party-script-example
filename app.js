@@ -4,7 +4,9 @@
 document.getElementById('open-chat').addEventListener('click', function () {
   console.log('opening chat')
   // https://docs.tidio.com/docs/other_methods
-  if (typeof tidioChatApi !== 'undefined') {
+
+  // safeguard against slow-loading JavaScript code
+  if (window.tidioChatApi) {
     tidioChatApi.open()
   }
 })
